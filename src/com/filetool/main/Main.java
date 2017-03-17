@@ -16,15 +16,18 @@ public class Main
 {
     public static void main(String[] args)
     {
-        if (args.length != 2)
-        {
-            System.err.println("please input args: graphFilePath, resultFilePath");
-            return;
-        }
+//        if (args.length != 2)
+//        {
+//            System.err.println("please input args: graphFilePath, resultFilePath");
+//            return;
+//        }
 
-        String graphFilePath = args[0];
-        String resultFilePath = args[1];
+      //  String graphFilePath = args[0];
+      //  String resultFilePath = args[1];
 
+    	String graphFilePath="C:\\Users\\chen\\Documents\\GitHub\\test1\\case_example\\case0.txt";
+        String resultFilePath="C:\\Users\\chen\\Documents\\GitHub\\test1\\case_example\\result.txt";
+        
         LogUtil.printLog("Begin");
 
         // 读取输入文件
