@@ -25,8 +25,8 @@ public class Main
       //  String graphFilePath = args[0];
       //  String resultFilePath = args[1];
 
-    	String graphFilePath="C:\\Users\\chen\\Documents\\GitHub\\test1\\case_example\\case0.txt";
-        String resultFilePath="C:\\Users\\chen\\Documents\\GitHub\\test1\\case_example\\result.txt";
+    	String graphFilePath="C:\\Users\\chen\\workspace\\test1\\case_example\\case0.txt";
+        String resultFilePath="C:\\Users\\chen\\workspace\\test1\\case_example\\result.txt";
         
         LogUtil.printLog("Begin");
 
