@@ -1,5 +1,6 @@
 package com.cacheserverdeploy.deploy;
 
+import com.chensharp.genetic.GeneticAlgorithmTest;
 
 public class Deploy
 {
@@ -13,6 +14,10 @@ public class Deploy
     public static String[] deployServer(String[] graphContent)
     {
         /**do your work here**/
+    	
+    	 GeneticAlgorithmTest test = new GeneticAlgorithmTest();  
+         test.caculte();  
+    	
     	
         return new String[]{"17","\r\n","0 8 0 20"};
     }

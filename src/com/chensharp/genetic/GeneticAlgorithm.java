@@ -9,8 +9,8 @@ import java.util.List;
  *
  */
 public abstract class GeneticAlgorithm {  
-    private List<Chromosome> population = new ArrayList<Chromosome>();  
-    private int popSize = 100;//种群数量  
+    private List<Chromosome> population = new ArrayList<Chromosome>();  //种群
+    private int popSize = 100;//个体数量  
     private int geneSize;//基因最大长度  
     private int maxIterNum = 500;//最大迭代次数  
     private double mutationRate = 0.01;//基因变异的概率  
@@ -29,6 +29,19 @@ public abstract class GeneticAlgorithm {
       
     public GeneticAlgorithm(int geneSize) {  
         this.geneSize = geneSize;  
+    }  
+    
+    /** 
+     *   
+     * @Description: 初始化种群 
+     */  
+    private void init() {  
+    	population = new ArrayList<Chromosome>();  
+        for (int i = 0; i < popSize; i++) {  
+            Chromosome chro = new Chromosome(geneSize);  
+            population.add(chro);  
+        }  
+        caculteScore();  
     }  
       
     public void caculte() {  
@@ -58,21 +71,10 @@ public abstract class GeneticAlgorithm {
     }  
       
       
-    /** 
-     * @Author:lulei   
-     * @Description: 初始化种群 
-     */  
-    private void init() {  
-        for (int i = 0; i < popSize; i++) {  
-            population = new ArrayList<Chromosome>();  
-            Chromosome chro = new Chromosome(geneSize);  
-            population.add(chro);  
-        }  
-        caculteScore();  
-    }  
+   
       
     /** 
-     * @Author:lulei   
+     * @Author:  
      * @Description:种群进行遗传 
      */  
     private void evolve() {  
@@ -101,7 +103,7 @@ public abstract class GeneticAlgorithm {
       
     /** 
      * @return 
-     * @Author:lulei   
+     * @Author:
      * @Description: 轮盘赌法选择可以遗传下一代的染色体 
      */  
     private Chromosome getParentChromosome (){  
@@ -184,7 +186,7 @@ public abstract class GeneticAlgorithm {
     /** 
      * @param x 
      * @return 
-     * @Author:lulei   
+     * @Author:  
      * @Description: 根据X计算Y值 Y=F(X) 
      */  
     public abstract double caculateY(double x);  

@@ -13,9 +13,8 @@ public class Chromosome {
     private double score;//对应的函数得分  
       
     public double getScore() {  
-        return score;  
+    	return score;  
     }  
-  
     public void setScore(double score) {  
         this.score = score;  
     }  
@@ -37,8 +36,7 @@ public class Chromosome {
     /** 
      * 生成一个新基因 
      */  
-    public Chromosome() {  
-          
+    public Chromosome() {   
     }  
       
     /** 
